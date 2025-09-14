@@ -1,4 +1,4 @@
- 
+import nlpaug.augmenter.word as naw 
 import gradio as gr
 import pickle
 import re
@@ -6,6 +6,11 @@ import nltk
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+nltk.download('stopwords')
+nltk.download('wordnet')
+nltk.download('punkt')
+nltk.download('punkt_tab')
+
 
 # Load trained TF-IDF and model (you’ll upload these files)
 with open("tfidf.pkl", "rb") as f:
